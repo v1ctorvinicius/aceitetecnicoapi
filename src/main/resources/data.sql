@@ -1,1 +1,15 @@
-select "coiso";
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (true, false, false, '2023-01-01');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (true, true, false, '2023-02-15');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (false, true, false, '2023-04-10');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (true, false, true, '2023-06-05');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (false, true, true, '2023-08-20');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (true, true, false, '2023-10-15');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (false, false, true, '2023-12-01');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (true, false, false, '2024-02-12');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (true, true, false, '2024-04-25');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (false, false, false, '2024-07-30');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (true, true, true, '2024-11-05');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (false, false, true, '2025-02-20');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (true, true, true, '2025-06-15');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (false, true, false, '2025-10-28');
+INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (true, false, true, '2026-03-05');

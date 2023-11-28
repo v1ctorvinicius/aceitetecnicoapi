@@ -1,5 +1,8 @@
 package com.example.aceitetecnico.navio.application.core.domain;
 
+import lombok.Data;
+
+@Data
 public class Navio {
     private String codNavio;
     private String nome;
