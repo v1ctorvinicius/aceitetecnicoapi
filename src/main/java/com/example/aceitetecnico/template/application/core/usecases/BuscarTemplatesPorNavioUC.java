@@ -1,0 +1,9 @@
+package com.example.aceitetecnico.template.application.core.usecases;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
+@Component
+@RequiredArgsConstructor
+public class BuscarTemplatesPorNavioUC {
+}
