@@ -11,10 +11,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Navio {
+    private Long id;
     private String codNavio;
     private String nome;
     private String bandeira;
-//    private TipoAfretamento tipo;
+    //    private TipoAfretamento tipo;
     private double comprimento;
     private double largura;
     private double cargaMax;
@@ -25,15 +26,16 @@ public class Navio {
 
     public static Navio from(NavioEntity entity) {
         return Navio.builder()
-            .codNavio(entity.getCodNavio())
-            .nome(entity.getNome())
-            .bandeira(entity.getBandeira())
-            .comprimento(entity.getComprimento())
-            .largura(entity.getLargura())
-            .cargaMax(entity.getCargaMax())
-            .emOperacao(entity.getEmOperacao())
-            .planoDeAmarracao(entity.getPlanoDeAmarracao())
-            .build();
+                .id(entity.getId())
+                .codNavio(entity.getCodNavio())
+                .nome(entity.getNome())
+                .bandeira(entity.getBandeira())
+                .comprimento(entity.getComprimento())
+                .largura(entity.getLargura())
+                .cargaMax(entity.getCargaMax())
+                .emOperacao(entity.getEmOperacao())
+                .planoDeAmarracao(entity.getPlanoDeAmarracao())
+                .build();
 
     }
 }

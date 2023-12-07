@@ -15,6 +15,10 @@ INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (false,
 INSERT INTO pedidodeatracacao (aceito, revisado, cancelado, data) VALUES (true, false, true, '2026-03-05');
 
 INSERT INTO navio (cod_navio, nome, bandeira, comprimento, largura, carga_max, em_operacao, plano_de_amarracao) VALUES
-    ('123', 'Navio1', 'Bandeira1', 100.5, 25.0, 5000.0, true, 'Plano1'),
-    ('456', 'Navio2', 'Bandeira2', 120.0, 30.0, 6000.0, false, 'Plano2'),
-    ('789', 'Navio3', 'Bandeira3', 90.0, 20.0, 4000.0, true, 'Plano3');
+    ('123', 'Navio', 'BR', 100.5, 25.0, 5000.0, true, 'Plano A'),
+    ('456', 'Ship', 'EUA', 120.0, 30.0, 6000.0, false, 'Plano B'),
+    ('789', 'корабль', 'RUS', 90.0, 20.0, 4000.0, true, 'Plano C'),
+    ('101', 'Oceanic', 'UK', 150.0, 40.0, 8000.0, true, 'Plano D'),
+    ('202', 'Seafarer', 'CAN', 110.0, 28.0, 5500.0, false, 'Plano E'),
+    ('303', 'Marítimo', 'ESP', 95.0, 22.0, 4200.0, true, 'Plano F'),
+    ('404', 'Pacifico', 'AUS', 135.0, 35.0, 7500.0, false, 'Plano G');
