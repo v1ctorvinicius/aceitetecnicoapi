@@ -19,17 +19,25 @@ public class PedidoDeAtracacaoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     //    private AgenteMaritimo agenteMaritimo;
-//    private Navio navio;
-//    private OperadorPortuario operadorPortuario;
+    private Long navioId;
+    //    private OperadorPortuario operadorPortuario;
     private Boolean aceito;
     private Boolean revisado;
     private Boolean cancelado;
     //    private Documentos documentos;
-    private LocalDate data;
+    private LocalDate dataInicio;
+    private LocalDate dataFim;
 
     public static PedidoDeAtracacaoEntity from(PedidoDeAtracacao pedidoDeAtracacao) {
-        return PedidoDeAtracacaoEntity.builder().aceito(pedidoDeAtracacao.getAceito()).revisado(pedidoDeAtracacao.getRevisado()).cancelado(pedidoDeAtracacao.getCancelado()).data(pedidoDeAtracacao.getData()).build();
+        return PedidoDeAtracacaoEntity.builder()
+                .id(pedidoDeAtracacao.getId())
+                .navioId(pedidoDeAtracacao.getNavioId())
+                .aceito(pedidoDeAtracacao.getAceito())
+                .revisado(pedidoDeAtracacao.getRevisado())
+                .cancelado(pedidoDeAtracacao.getCancelado())
+                .dataInicio(pedidoDeAtracacao.getDataInicio())
+                .dataFim(pedidoDeAtracacao.getDataFim())
+                .build();
     }
 }

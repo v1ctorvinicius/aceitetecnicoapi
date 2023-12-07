@@ -1,6 +1,8 @@
 package com.example.aceitetecnico.navio.database;
 
 import com.example.aceitetecnico.navio.application.core.domain.Navio;
+import com.example.aceitetecnico.template.application.core.domain.Template;
+import com.example.aceitetecnico.template.database.TemplateEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,6 +32,7 @@ public class NavioEntity {
     private String planoDeAmarracao;
     // private Afretamento afretamento;
     // private Berco bercoAtual;
+    private Long idTemplate;
 
     public static NavioEntity from(Navio navio){
         return NavioEntity.builder()
@@ -41,6 +44,7 @@ public class NavioEntity {
                 .cargaMax(navio.getCargaMax())
                 .emOperacao(navio.getEmOperacao())
                 .planoDeAmarracao(navio.getPlanoDeAmarracao())
+                .idTemplate(navio.getIdTemplate())
                 .build();
 
     }

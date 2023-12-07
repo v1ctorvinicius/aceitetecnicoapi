@@ -15,6 +15,6 @@ public class ListarTemplatesUC implements ListarTemplatesInputPort {
     private final ListarTemplatesOutputPort outputPort;
     @Override
     public List<Template> run() {
-        return null;
+        return outputPort.run().stream().map(Template::from).toList();
     }
 }

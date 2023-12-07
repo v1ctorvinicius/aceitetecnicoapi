@@ -23,6 +23,7 @@ public class Navio {
     private String planoDeAmarracao;
     // private Afretamento afretamento;
     // private Berco bercoAtual;
+    private Long idTemplate;
 
     public static Navio from(NavioEntity entity) {
         return Navio.builder()
@@ -35,6 +36,7 @@ public class Navio {
                 .cargaMax(entity.getCargaMax())
                 .emOperacao(entity.getEmOperacao())
                 .planoDeAmarracao(entity.getPlanoDeAmarracao())
+                .idTemplate(entity.getIdTemplate())
                 .build();
 
     }

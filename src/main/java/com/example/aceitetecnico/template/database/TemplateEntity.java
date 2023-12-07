@@ -1,5 +1,8 @@
 package com.example.aceitetecnico.template.database;
 
+import com.example.aceitetecnico.documentos.application.core.domain.PlanoDeCarga;
+import com.example.aceitetecnico.documentos.application.database.PlanoDeCargaEntity;
+import com.example.aceitetecnico.template.application.core.domain.Template;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,8 +18,18 @@ import lombok.NoArgsConstructor;
 public class TemplateEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long pedidoId;
+
+    private Long planoDeCargaId;
+    // outros documentos necessarios para o pedido de atracação
+
+
+    public static TemplateEntity from(Template template) {
+        return null;
+    }
+
 
 
 

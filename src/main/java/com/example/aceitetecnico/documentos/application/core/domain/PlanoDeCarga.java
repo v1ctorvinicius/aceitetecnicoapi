@@ -1,7 +1,10 @@
 package com.example.aceitetecnico.documentos.application.core.domain;
 
+import com.example.aceitetecnico.documentos.application.database.PlanoDeCargaEntity;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.pdfbox.pdmodel.PDDocument;
 
 import java.time.LocalDate;
@@ -12,9 +15,25 @@ oficial de carregamento ou pelo mestre da embarcação e é fundamental para a o
 
 @Data
 @AllArgsConstructor
+@Builder
+@NoArgsConstructor
 public class PlanoDeCarga {
-    private final PDDocument pdf;
-    private final LocalDate validacao;
+    private Long id;
+    private Long templateId;
+    private Long pdfId;
+    private LocalDate validacao;
     // TODO: parametros de validação
-    private final LocalDate vencimento;
+    private LocalDate vencimento;
+
+
+    public static PlanoDeCarga from(PlanoDeCargaEntity planoDeCargaEntity) {
+        return PlanoDeCarga.builder()
+                .id(planoDeCargaEntity.getId())
+                .templateId(planoDeCargaEntity.getTemplateId())
+                .pdfId(planoDeCargaEntity.getPdfId())
+                .validacao(planoDeCargaEntity.getValidacao())
+                .vencimento(planoDeCargaEntity.getVencimento())
+                .build();
+
+    }
 }

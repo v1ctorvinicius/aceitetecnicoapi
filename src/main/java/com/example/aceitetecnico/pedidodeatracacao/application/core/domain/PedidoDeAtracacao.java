@@ -14,13 +14,14 @@ import java.time.LocalDate;
 public class PedidoDeAtracacao {
     private Long id;
     //    private AgenteMaritimo agenteMaritimo;
-    //    private Navio navio;
+    private Long navioId;
     //    private OperadorPortuario operadorPortuario;
     private Boolean aceito;
     private Boolean revisado;
     private Boolean cancelado;
     private Documentos documentos;
-    private LocalDate data;
+    private LocalDate dataInicio;
+    private LocalDate dataFim;
 
     //TODO: Implementar
     public void validar() {
@@ -29,10 +30,12 @@ public class PedidoDeAtracacao {
     public static PedidoDeAtracacao from(PedidoDeAtracacaoEntity pedidoDeAtracacaoEntity) {
         return PedidoDeAtracacao.builder()
                 .id(pedidoDeAtracacaoEntity.getId())
+                .navioId(pedidoDeAtracacaoEntity.getNavioId())
                 .aceito(pedidoDeAtracacaoEntity.getAceito())
                 .revisado(pedidoDeAtracacaoEntity.getRevisado())
                 .cancelado(pedidoDeAtracacaoEntity.getCancelado())
-                .data(pedidoDeAtracacaoEntity.getData())
+                .dataInicio(pedidoDeAtracacaoEntity.getDataInicio())
+                .dataFim(pedidoDeAtracacaoEntity.getDataFim())
                 .build();
     }
 }
