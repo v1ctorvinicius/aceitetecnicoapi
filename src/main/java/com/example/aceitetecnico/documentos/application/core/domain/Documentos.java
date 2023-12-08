@@ -23,5 +23,5 @@ public class Documentos {
     private File certificadoVistoria;
     private File planoDeCarga;
     private File certificadoEquipamentoBordo;
-
+    private String status; //valido, invalido, pendencia
 }
