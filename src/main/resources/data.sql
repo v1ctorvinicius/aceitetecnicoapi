@@ -51,7 +51,15 @@ VALUES ('123', 'Navio', 'BR', 100.5, 25.0, 5000.0, true, 'Plano A'),
        ('101', 'Oceanic', 'UK', 150.0, 40.0, 8000.0, true, 'Plano D'),
        ('202', 'Seafarer', 'CAN', 110.0, 28.0, 5500.0, false, 'Plano E'),
        ('303', 'Marítimo', 'ESP', 95.0, 22.0, 4200.0, true, 'Plano F'),
-       ('404', 'Pacifico', 'AUS', 135.0, 35.0, 7500.0, false, 'Plano G');
+       ('404', 'Pacifico', 'AUS', 135.0, 35.0, 7500.0, false, 'Plano G'),
+       ('505', 'Pacifico', 'AUS', 135.0, 35.0, 7500.0, false, 'Plano G'),
+       ('505', 'Pacifico', 'AUS', 135.0, 35.0, 7500.0, false, 'Plano G'),
+       ('505', 'Pacifico', 'AUS', 135.0, 35.0, 7500.0, false, 'Plano G'),
+       ('505', 'Pacifico', 'AUS', 135.0, 35.0, 7500.0, false, 'Plano G'),
+       ('505', 'Pacifico', 'AUS', 135.0, 35.0, 7500.0, false, 'Plano G'),
+       ('505', 'Pacifico', 'AUS', 135.0, 35.0, 7500.0, false, 'Plano G'),
+       ('505', 'Pacifico', 'AUS', 135.0, 35.0, 7500.0, false, 'Plano G'),
+       ('505', 'Pacifico', 'AUS', 135.0, 35.0, 7500.0, false, 'Plano G');
 
 INSERT INTO plano_de_carga (template_id, vencimento) VALUES (1, '2023-12-31');
 INSERT INTO plano_de_carga (template_id, vencimento) VALUES (2, '2023-12-01');
