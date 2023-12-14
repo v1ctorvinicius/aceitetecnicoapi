@@ -18,7 +18,9 @@ import java.time.LocalDate;
 public class Template {
     private Long id;
     private Long pedidoId;
+    private Long navioId;
     private Long planoDeCargaId;
+    private String status;
 
 //    TODO tirar daqui
 //    private final BuscarPlanoDeCargaPeloIdUC buscarPlanoDeCargaPeloIdUC;
@@ -34,7 +36,9 @@ public class Template {
         return Template.builder()
                 .id(entity.getId())
                 .pedidoId(entity.getPedidoId())
+                .navioId(entity.getNavioId())
                 .planoDeCargaId(entity.getPlanoDeCargaId())
+                .status(entity.getStatus())
                 .build();
 
     }

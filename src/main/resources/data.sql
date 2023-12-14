@@ -64,6 +64,8 @@ VALUES ('123', 'Navio', 'BR', 100.5, 25.0, 5000.0, true, 'Plano A'),
 INSERT INTO plano_de_carga (template_id, vencimento) VALUES (1, '2023-12-31');
 INSERT INTO plano_de_carga (template_id, vencimento) VALUES (2, '2023-12-01');
 
-INSERT INTO template (pedido_id, plano_de_carga_id) VALUES (1, 1 );
-INSERT INTO template (pedido_id, plano_de_carga_id) VALUES (1, 2 );
+INSERT INTO template (pedido_id, plano_de_carga_id, navio_id, status) VALUES (1, 1 , 1, "valido");
+INSERT INTO template (pedido_id, plano_de_carga_id, navio_id, status) VALUES (1, 2, 1, "invalido");
+INSERT INTO template (pedido_id, plano_de_carga_id, navio_id, status) VALUES (2, 3, 1, "espera");
+INSERT INTO template (pedido_id, plano_de_carga_id, navio_id, status) VALUES (3, 4, 2, "valido");
 

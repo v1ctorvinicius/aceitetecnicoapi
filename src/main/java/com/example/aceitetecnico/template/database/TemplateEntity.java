@@ -21,16 +21,22 @@ public class TemplateEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long pedidoId;
-
+    private Long navioId;
     private Long planoDeCargaId;
+    private String status;
     // outros documentos necessarios para o pedido de atracação
 
 
     public static TemplateEntity from(Template template) {
-        return null;
+        return TemplateEntity.builder()
+                .id(template.getId())
+                .pedidoId(template.getPedidoId())
+                .navioId(template.getNavioId())
+                .planoDeCargaId(template.getPlanoDeCargaId())
+                .status(template.getStatus())
+                .build();
+
     }
-
-
 
 
 }

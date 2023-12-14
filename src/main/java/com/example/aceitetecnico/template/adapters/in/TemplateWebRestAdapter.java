@@ -4,6 +4,7 @@ import com.example.aceitetecnico.template.application.core.domain.Template;
 import com.example.aceitetecnico.template.application.core.usecases.BuscarTemplatePeloIdUC;
 import com.example.aceitetecnico.template.application.core.usecases.ListarTemplatesUC;
 import com.example.aceitetecnico.template.application.ports.in.BuscarTemplatePeloIdInputPort;
+import com.example.aceitetecnico.template.application.ports.in.BuscarTemplatesPorNavioInputPort;
 import com.example.aceitetecnico.template.application.ports.in.ListarTemplatesInputPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ public class TemplateWebRestAdapter {
 
     private final BuscarTemplatePeloIdInputPort buscarTemplatePeloIdInputPort;
     private final ListarTemplatesInputPort listarTemplatesInputPort;
+    private final BuscarTemplatesPorNavioInputPort buscarTemplatesPorNavioInputPort;
 
     @GetMapping
     public ResponseEntity<List<Template>> gelAll() {
@@ -30,6 +32,11 @@ public class TemplateWebRestAdapter {
     @GetMapping("/{id}")
     public ResponseEntity<Template> getById(@PathVariable Long id) {
         return ResponseEntity.ok(buscarTemplatePeloIdInputPort.run(id));
+    }
+
+    @GetMapping("/navio/{id}")
+    public ResponseEntity<List<Template>> getByNavio(@PathVariable Long id) {
+        return ResponseEntity.ok(buscarTemplatesPorNavioInputPort.run(id));
     }
 
 }

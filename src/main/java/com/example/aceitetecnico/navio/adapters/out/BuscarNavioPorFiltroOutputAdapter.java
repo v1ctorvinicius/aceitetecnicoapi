@@ -21,8 +21,13 @@ public class BuscarNavioPorFiltroOutputAdapter implements BuscarNavioPorFiltroOu
 
   @Override
   public List<Navio> run(String nome, String bandeira, String codNavio) {
+
+    if (codNavio != null ) {
+
+    }
     
     List<NavioEntity> entities = navioJpaRepositoryAdapter.findByNome(nome);
+
     return entities.stream().map(Navio::from).toList();
   }
 
